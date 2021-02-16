@@ -1,10 +1,12 @@
 {
   "name": "demo-ac-vue",
+  "description": "An Ionic project",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve --port=8100",
+    "build": "vue-cli-service build && cap copy",
+    "test:dev": "vue-cli-service test:unit --watch",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.6",
+    "@ionic/prettier-config": "~1.0.1",
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
@@ -34,8 +37,11 @@
     "@vue/test-utils": "^2.0.0-0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
+    "husky": "~5.0.9",
+    "prettier": "~2.2.1",
+    "pretty-quick": "~3.1.0",
     "typescript": "~3.9.3",
     "vue-jest": "^5.0.0-0"
   },
-  "description": "An Ionic project"
+  "prettier": "@ionic/prettier-config"
 }
